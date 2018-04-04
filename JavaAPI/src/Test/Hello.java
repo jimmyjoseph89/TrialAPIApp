@@ -55,7 +55,6 @@ public class Hello {
 	public static final String usedFormat = APPLICATION_JSON;
 
 	@GET
-	// @Produces(MediaType.TEXT_HTML)
 	@Produces(MediaType.APPLICATION_JSON)
 	public String sayHello() throws IOException, ODataException {
 		Edm edm = readEdm(serviceUrl);
@@ -122,6 +121,7 @@ public class Hello {
 		System.out.println(jsonFromPojo);
 		// String resource = "<h1>Hi Jimmy, This is hello from Html</h1>";
 		return jsonFromPojo;
+		// @Produces(MediaType.TEXT_HTML)
 	}
 
 	@Produces(MediaType.APPLICATION_JSON)
